@@ -89,7 +89,9 @@ export const getFileBySlug = async <T extends PostType>(
 export const getAllFilesFrontMatter = async <T extends PostType>(
   type: T
 ): Promise<Array<PostByType<T>>> => {
-  const files = fs.readdirSync(path.join(root, typeToPath[type]));
+  const files = fs
+    .readdirSync(path.join(root, typeToPath[type]))
+    .filter((file) => file.endsWith('.mdx'));
 
   const posts = files
     .map((postSlug: string) => {
