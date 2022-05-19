@@ -19,10 +19,9 @@ module.exports = {
   ],
   title: 'Jonathan Miller',
   titleAlt: 'Jonathan Miller | Blog',
-  description:
-    "Hi I'm Maxime, and this is my blog. Here, I share through my writing my experience as a frontend engineer and everything I'm learning about on React, Typescript, SwiftUI, Serverless, and testing.",
-  url: 'https://blog.maximeheckel.com', // Site domain without trailing slash
-  siteUrl: 'https://blog.maximeheckel.com/', // url + pathPrefix
+  description: "Hi I'm Jonathan",
+  url: process.env.NEXT_PUBLIC_BASE_URL, // Site domain without trailing slash
+  siteUrl: process.env.NEXT_PUBLIC_BASE_URL + '/', // url + pathPrefix
   siteLanguage: 'en', // Language Tag on <html> element
   logo: 'src/static/logo/logo.png',
   image: 'https://blog.maximeheckel.com/static/og/main-og-image.png',
@@ -32,5 +31,8 @@ module.exports = {
   themeColor: '#000000',
   backgroundColor: '#ffffff',
   twitter: '@jmilldotdev', // Twitter Username
+  twitterUrl: 'https://twitter.com/jmilldotdev', // Twitter Site URL
   twitterDesc: 'Jonathan Miller is that dude',
+  githubUrl: 'https://github.com/jmilldotdev',
+  newsletterArchiveUrl: 'https://buttondown.email/jmill/archive',
 };

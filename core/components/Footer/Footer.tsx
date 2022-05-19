@@ -8,6 +8,7 @@ import {
 } from '@maximeheckel/design-system';
 import Grid from '@theme/components/Grid';
 import Logo from '@theme/components/Logo';
+import { twitterUrl, githubUrl, newsletterArchiveUrl } from 'config/site';
 import Link from 'next/link';
 
 const FooterBlock = styled('footer', {
@@ -50,9 +51,6 @@ const Footer = () => (
                 <Link href="/" passHref>
                   <Anchor discreet>Home</Anchor>
                 </Link>
-                <Link href="/design" passHref>
-                  <Anchor discreet>Design</Anchor>
-                </Link>
                 <Link href="/rss.xml" passHref>
                   <Anchor discreet>RSS</Anchor>
                 </Link>
@@ -64,7 +62,7 @@ const Footer = () => (
               <Grid>
                 <Anchor
                   discreet
-                  href="https://twitter.com/MaximeHeckel"
+                  href={twitterUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -72,7 +70,7 @@ const Footer = () => (
                 </Anchor>
                 <Anchor
                   discreet
-                  href="https://github.com/MaximeHeckel"
+                  href={githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -80,31 +78,11 @@ const Footer = () => (
                 </Anchor>
                 <Anchor
                   discreet
-                  href="https://buttondown.email/MaximeHeckel/archive/"
+                  href={newsletterArchiveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Newsletter
-                </Anchor>
-              </Grid>
-            </Text>
-          </Box>
-          <Box>
-            <Text size={1}>
-              <Grid>
-                <Anchor
-                  discreet
-                  href="https://maximeheckel.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Portfolio
-                </Anchor>
-                <Anchor
-                  discreet
-                  href="https://www.figma.com/file/uvkUCtxXs7Vvmj58sHh0TE/Maxime's-Public-Roadmap?node-id=0%3A1"
-                >
-                  Roadmap
                 </Anchor>
               </Grid>
             </Text>
@@ -118,10 +96,17 @@ const Footer = () => (
             variant="primary"
             weight="3"
           >
-            © {new Date().getFullYear()} Maxime Heckel ——{' '}
-            <EM size="1">New York</EM>
+            © {new Date().getFullYear()} Jonathan Miller -- Design by{' '}
+            <Anchor
+              discreet
+              href="https://maximeheckel.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Maxime Heckel
+            </Anchor>
           </Text>
-          <Logo alt="Maxime Heckel's logo" size={35} />
+          <Logo alt="Logo" size={35} />
         </FooterContent>
       </FooterWrapper>
     </Grid>

@@ -22,6 +22,8 @@ import Card from '@theme/components/Card';
 import Layout from '@theme/layout';
 import { getAllFilesFrontMatter } from 'lib/mdx';
 import { Post, PostType } from 'types/post';
+import { twitter, twitterUrl, url } from 'config/site';
+import { about } from 'config/internals';
 
 const NewsletterForm = dynamic(
   () => import('@theme/components/NewsletterForm')
@@ -89,11 +91,9 @@ const IndexPage = (props: Props) => {
       <Grid columns="medium" gapX={4} gapY={12} className={wrapperGrid()}>
         <Box>
           <H1>
-            Hi <WavingHand /> I'm Maxime, and this is my blog.{' '}
+            Hi <WavingHand /> I'm Jonathan, and this is my blog.{' '}
             <Text variant="secondary" size="7" weight="4">
-              Here, I share through my writing my experience as a frontend
-              engineer and everything I'm learning about on React, Typescript,
-              SwiftUI, Serverless, and testing.
+              Here, I share through my writing.
             </Text>
           </H1>
           <Flex
@@ -103,29 +103,25 @@ const IndexPage = (props: Props) => {
               marginRight: '-var(--space-3)',
             }}
           >
-            <a
-              href="https://maximeheckel.com"
-              style={{ textDecoration: 'none' }}
-              tabIndex={-1}
-            >
+            <a href={about} style={{ textDecoration: 'none' }} tabIndex={-1}>
               <Button variant="secondary" endIcon={<Icon.External />}>
                 About me
               </Button>
               <VisuallyHidden as="p">
-                Link redirects to my portfolio https://maximeheckel.com.
+                Link redirects to my about page: {url + about}
               </VisuallyHidden>
             </a>
             <a
-              href="https://twitter.com/MaximeHeckel"
+              href={twitterUrl}
               style={{ textDecoration: 'none' }}
               tabIndex={-1}
             >
               <Button variant="secondary" endIcon={<Icon.Twitter />}>
-                @MaximeHeckel
+                {twitter}
               </Button>
               <VisuallyHidden as="p">
                 Link redirects to my Twitter profile page
-                https://twitter.com/MaximeHeckel.
+                {twitterUrl}
               </VisuallyHidden>
             </a>
           </Flex>
@@ -305,15 +301,6 @@ const IndexPage = (props: Props) => {
               );
             })}
           </Grid>
-          <br />
-          <Card>
-            <Card.Body>
-              <H3>#BlackLivesMatter</H3>
-              <Anchor underline href="https://blacklivesmatters.carrd.co/">
-                Click here to find out how you can help.
-              </Anchor>
-            </Card.Body>
-          </Card>
         </section>
       </Grid>
     </Layout>

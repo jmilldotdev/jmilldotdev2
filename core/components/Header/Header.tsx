@@ -5,6 +5,7 @@ import Tooltip from '@theme/components/Tooltip';
 import useKeyboardShortcut from '@theme/hooks/useKeyboardShortcut';
 import useProgress from '@theme/hooks/useProgress';
 import useScrollCounter from '@theme/hooks/useScrollCounter';
+import { twitter, twitterUrl } from 'config/site';
 import { AnimatePresence } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
@@ -55,9 +56,9 @@ const Header = (props: HeaderProps) => {
         aria-label="Follow me on Twitter"
         title="Follow me on Twitter"
         rel="me"
-        href="https://twitter.com/MaximeHeckel"
+        href={twitterUrl}
       >
-        @MaximeHeckel
+        {twitter}
       </a>
       {/**
        * Gracefully show the search component when activated
