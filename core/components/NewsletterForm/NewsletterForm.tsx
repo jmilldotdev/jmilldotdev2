@@ -16,6 +16,7 @@ import { NewsletterHeader } from './Icons';
 import { NewsletterFormContent, ErrorMessage } from './Styles';
 import { subscribeCall } from './utils';
 import List from '../List';
+import { newsletterArchiveUrl } from 'config/site';
 
 const textOutVariant = {
   checked: {
@@ -113,7 +114,7 @@ const NewsletterForm = (props: Props) => {
               variant="secondary"
             >
               Subscribe to{' '}
-              <Anchor underline href="https://buttondown.email/MaximeHeckel">
+              <Anchor underline href={newsletterArchiveUrl}>
                 my newsletter
               </Anchor>{' '}
               to receive a monthly digest containing:
@@ -140,21 +141,8 @@ const NewsletterForm = (props: Props) => {
                   }}
                   variant="secondary"
                 >
-                  <EM>Exclusive previews of upcoming articles</EM> on frontent
-                  development, React, and SwiftUI
-                </Text>
-              </List.Item>
-              <List.Item>
-                <Text
-                  as="p"
-                  css={{
-                    marginBottom: '0px',
-                  }}
-                  variant="secondary"
-                >
-                  Some of my <EM>favorite resources and tips</EM> on frontend
-                  development or anything I&apos;m currently interested in to
-                  further expand your skillset as a developer
+                  <EM>Exclusive previews of upcoming articles</EM> on AI art and
+                  Cryptocurrency
                 </Text>
               </List.Item>
             </List>
@@ -168,8 +156,8 @@ const NewsletterForm = (props: Props) => {
               }}
               variant="secondary"
             >
-              Get email from me about my ideas, frontend development resources
-              and tips as well as exclusive previews of upcoming articles.
+              Get email from me about my ideas, as well as exclusive previews of
+              upcoming articles.
             </Text>
             <br />
           </>

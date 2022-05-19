@@ -1,4 +1,6 @@
 import { css, Icon, VisuallyHidden } from '@maximeheckel/design-system';
+import { about } from 'config/internals';
+import { emailAddress, twitterUrl } from 'config/site';
 import Link from 'next/link';
 import { MAX_HEIGHT } from './constants';
 import { Separator, Item, KBD } from './Styles';
@@ -36,31 +38,27 @@ const CommandCenterStatic = () => (
       </Link>
     </Item>
     <Item data-testid="navigation" key="design-navigation">
-      <Link href="/design/">
+      <Link href={about}>
         <a>
           <Icon.Arrow size={4} />
-          <span style={{ marginLeft: '20px' }}>Design System</span>
+          <span style={{ marginLeft: '20px' }}>About</span>
         </a>
       </Link>
     </Item>
     <Separator>Links</Separator>
     <Item data-testid="link" key="twitter-social-link">
-      <a
-        href="https://twitter.com/MaximeHeckel"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={twitterUrl} target="_blank" rel="noopener noreferrer">
         <Icon.Twitter />
         <span style={{ marginLeft: '15px' }}>Twitter</span>
         <VisuallyHidden as="p">
           Link redirects to my Twitter profile page
-          https://twitter.com/MaximeHeckel.
+          {twitterUrl}.
         </VisuallyHidden>
       </a>
     </Item>
     <Item data-testid="link" key="email-link">
       <a
-        href="mailto:hello@maximeheckel.com"
+        href={`mailto:${emailAddress}`}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -68,34 +66,7 @@ const CommandCenterStatic = () => (
         <span style={{ marginLeft: '15px' }}>Contact</span>
         <VisuallyHidden as="p">
           Link opens your default mail client with my email address
-          hello@maximeheckel.com prefilled.
-        </VisuallyHidden>
-      </a>
-    </Item>
-    <Item data-testid="link" key="roadmap-link">
-      <a
-        href="https://www.figma.com/file/uvkUCtxXs7Vvmj58sHh0TE/Maxime's-Public-Roadmap?node-id=0%3A1"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon.Map />
-        <span style={{ marginLeft: '15px' }}>Roadmap</span>
-        <VisuallyHidden as="p">
-          Link redirects to a Figjam file where you can see the roadmap with my
-          upcoming projects and ideas.
-        </VisuallyHidden>
-      </a>
-    </Item>
-    <Item data-testid="link" key="maximeheckelcom-link">
-      <a
-        href="https://maximeheckel.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon.Portfolio />
-        <span style={{ marginLeft: '15px' }}>Work</span>
-        <VisuallyHidden as="p">
-          Link redirects to my portfolio https://maximeheckel.com.
+          {emailAddress} prefilled.
         </VisuallyHidden>
       </a>
     </Item>

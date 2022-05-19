@@ -1,5 +1,6 @@
 import { styled, Anchor, Text } from '@maximeheckel/design-system';
 import WebmentionReplies from '@theme/components/Webmentions/WebmentionReplies';
+import { twitter, twitterUrl } from 'config/site';
 import dynamic from 'next/dynamic';
 
 const NewsletterForm = dynamic(
@@ -35,18 +36,13 @@ const Signature = ({ title, url }: { title: string; url: string }) => {
           privately? Don&rsquo;t hesitate to shoot me a DM on{' '}
           <Anchor
             favicon
-            href="http://twitter.com/MaximeHeckel"
+            href={twitterUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
             Twitter
           </Anchor>
           .
-        </Text>
-        <br />
-        <Text as="p">
-          Have a wonderful day. <br />
-          Maxime
         </Text>
         <NewsletterForm />
       </section>

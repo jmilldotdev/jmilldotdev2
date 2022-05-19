@@ -35,4 +35,5 @@ module.exports = {
   twitterDesc: 'Jonathan Miller is that dude',
   githubUrl: 'https://github.com/jmilldotdev',
   newsletterArchiveUrl: 'https://buttondown.email/jmill/archive',
+  emailAddress: 'jon@jmill.dev',
 };

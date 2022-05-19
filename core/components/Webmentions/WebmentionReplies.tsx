@@ -1,4 +1,5 @@
 import { Anchor, Text } from '@maximeheckel/design-system';
+import { twitter } from 'config/site';
 import dynamic from 'next/dynamic';
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
@@ -17,7 +18,7 @@ const WebmentionReplies = ({ title, url }: Props) => {
 
   const [replies, setReplies] = React.useState<Reply[]>([]);
   const perPage = 500;
-  const text = `${title} by @MaximeHeckel ${url}`;
+  const text = `${title} by ${twitter} ${url}`;
 
   const getMentions = React.useCallback(
     () =>
@@ -26,17 +27,6 @@ const WebmentionReplies = ({ title, url }: Props) => {
       ).then((response) => (response.json ? response.json() : response)),
     [page, url]
   );
-  // const incrementPage = () => setPage((previousPage) => previousPage + 1);
-  //   const fetchMore = () =>
-  //     getMentions()
-  //       .then((newReplies) => {
-  //         if (newReplies.length) {
-  //           setReplies(newReplies);
-  //         } else {
-  //           setFetchState('nomore');
-  //         }
-  //       })
-  //       .then(incrementPage);
 
   React.useEffect(() => {
     getMentions().then((newReplies) => {

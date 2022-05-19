@@ -148,10 +148,12 @@ const BlogLayout = ({ children, frontMatter, ogImage }: Props) => {
                   marginLeft: '-var(--space-2)',
                 }}
               >
-                <Pill variant="info">
-                  Last Updated{' '}
-                  {format(new Date(Date.parse(updated)), 'MMMM d, yyyy')}
-                </Pill>
+                {updated && (
+                  <Pill variant="info">
+                    Last Updated{' '}
+                    {format(new Date(Date.parse(updated)), 'MMMM d, yyyy')}
+                  </Pill>
+                )}
               </Flex>
             </Hero.Info>
             {cover ? <Hero.Img className="u-photo" src={cover} /> : null}

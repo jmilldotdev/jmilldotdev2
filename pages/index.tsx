@@ -23,7 +23,7 @@ import Layout from '@theme/layout';
 import { getAllFilesFrontMatter } from 'lib/mdx';
 import { Post, PostType } from 'types/post';
 import { twitter, twitterUrl, url } from 'config/site';
-import { about } from 'config/internals';
+import { about, projects } from 'config/internals';
 
 const NewsletterForm = dynamic(
   () => import('@theme/components/NewsletterForm')
@@ -93,7 +93,9 @@ const IndexPage = (props: Props) => {
           <H1>
             Hi <WavingHand /> I'm Jonathan, and this is my blog.{' '}
             <Text variant="secondary" size="7" weight="4">
-              Here, I share through my writing.
+              Here, I write about anything interesting to me, including AI art,
+              Language Models, Cryptocurrency & NFTs, and the future of
+              communities.
             </Text>
           </H1>
           <Flex
@@ -109,6 +111,14 @@ const IndexPage = (props: Props) => {
               </Button>
               <VisuallyHidden as="p">
                 Link redirects to my about page: {url + about}
+              </VisuallyHidden>
+            </a>
+            <a href={projects} style={{ textDecoration: 'none' }} tabIndex={-1}>
+              <Button variant="secondary" endIcon={<Icon.External />}>
+                Projects
+              </Button>
+              <VisuallyHidden as="p">
+                Link redirects to my projects page: {url + projects}
               </VisuallyHidden>
             </a>
             <a

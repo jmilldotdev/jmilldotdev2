@@ -7,9 +7,9 @@ import ProgressBar from './ProgressBar';
 
 const Wrapper = styled('div', {
   position: 'fixed',
-  top: '266px',
+  top: '120px',
   display: 'flex',
-  left: '30px',
+  right: '30px',
 
   ul: {
     maxWidth: '200px',
