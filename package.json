@@ -22,7 +22,7 @@
     "generate:sitemap": "node ./scripts/generate-sitemap",
     "initialize": "echo \"@maximeheckel:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=GITHUB_PACKAGES_READ_TOKEN\" >> .npmrc",
     "lint": "eslint --ext=jsx,ts,tsx .",
-    "prebuild": "yarn generate:posts && yarn generate:index && yarn generate:og && yarn generate:rss && yarn generate:sitemap",
+    "prebuild": "yarn generate:index && yarn generate:og && yarn generate:rss && yarn generate:sitemap",
     "start": "next start",
     "test": "is-ci \"test:coverage\" \"test:watch\"",
     "test:coverage": "jest --coverage",
