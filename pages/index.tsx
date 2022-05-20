@@ -23,7 +23,7 @@ import Layout from '@theme/layout';
 import { getAllFilesFrontMatter } from 'lib/mdx';
 import { Post, PostType } from 'types/post';
 import { twitter, twitterUrl, url } from 'config/site';
-import { about, projects } from 'config/internals';
+import { startHere, projects } from 'config/internals';
 
 const NewsletterForm = dynamic(
   () => import('@theme/components/NewsletterForm')
@@ -105,12 +105,16 @@ const IndexPage = (props: Props) => {
               marginRight: '-var(--space-3)',
             }}
           >
-            <a href={about} style={{ textDecoration: 'none' }} tabIndex={-1}>
+            {/* <a
+              href={startHere}
+              style={{ textDecoration: 'none' }}
+              tabIndex={-1}
+            >
               <Button variant="secondary" endIcon={<Icon.External />}>
-                About me
+                Start Here
               </Button>
               <VisuallyHidden as="p">
-                Link redirects to my about page: {url + about}
+                Link redirects to my start here page: {url + startHere}
               </VisuallyHidden>
             </a>
             <a href={projects} style={{ textDecoration: 'none' }} tabIndex={-1}>
@@ -120,7 +124,7 @@ const IndexPage = (props: Props) => {
               <VisuallyHidden as="p">
                 Link redirects to my projects page: {url + projects}
               </VisuallyHidden>
-            </a>
+            </a> */}
             <a
               href={twitterUrl}
               style={{ textDecoration: 'none' }}

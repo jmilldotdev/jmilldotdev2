@@ -41,11 +41,10 @@ const matter = require('gray-matter');
 
   try {
     const feed = new RSS({
-      title: "Maxime Heckel's Blog",
-      description:
-        "Hi I'm Maxime, and this is my blog. Here, I share through my writing my experience as a frontend engineer and everything I'm learning about on React, Typescript, SwiftUI, Serverless, and testing.",
-      site_url: 'https://blog.maximeheckel.com',
-      feed_url: 'https://blog.maximeheckel.com/rss.xml',
+      title: 'Jonathan Miller',
+      description: "Hi I'm Jonathan Miller and this is my site.",
+      site_url: 'https://jmill.dev',
+      feed_url: 'https://jmill.dev/rss.xml',
       image_url: 'https://blog.maximeheckel.com/static/og/main-og-image.png',
       language: 'en',
     });
@@ -56,7 +55,7 @@ const matter = require('gray-matter');
     ].sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 
     content.forEach((post) => {
-      const url = `https://blog.maximeheckel.com/${
+      const url = `https://jmill.dev/${
         post.type === 'snippet' ? 'snippets' : 'posts'
       }/${post.slug}`;
 
@@ -64,7 +63,7 @@ const matter = require('gray-matter');
         title: post.title,
         description: post.type === 'snippet' ? '' : post.subtitle,
         date: new Date(post.date),
-        author: 'Maxime heckel',
+        author: 'Jonathan Miller',
         url,
         guid: url,
       });

@@ -1,163 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title><![CDATA[Maxime Heckel's Blog]]></title>
-        <description><![CDATA[Hi I'm Maxime, and this is my blog. Here, I share through my writing my experience as a frontend engineer and everything I'm learning about on React, Typescript, SwiftUI, Serverless, and testing.]]></description>
-        <link>https://blog.maximeheckel.com</link>
+        <title><![CDATA[Jonathan Miller]]></title>
+        <description><![CDATA[Hi I'm Jonathan Miller and this is my site.]]></description>
+        <link>https://jmill.dev</link>
         <image>
             <url>https://blog.maximeheckel.com/static/og/main-og-image.png</url>
-            <title>Maxime Heckel&apos;s Blog</title>
-            <link>https://blog.maximeheckel.com</link>
+            <title>Jonathan Miller</title>
+            <link>https://jmill.dev</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 10 May 2022 13:41:52 GMT</lastBuildDate>
-        <atom:link href="https://blog.maximeheckel.com/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Fri, 20 May 2022 01:53:13 GMT</lastBuildDate>
+        <atom:link href="https://jmill.dev/rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[en]]></language>
         <item>
             <title><![CDATA[10 Favorite Takeaways from Linking Your Thinking Fall '21]]></title>
             <description><![CDATA[Here are 10 of my favorite takeaways from  the Linking Your Thinking Workshop, Fall '21.]]></description>
-            <link>https://blog.maximeheckel.com/posts/2021-10-17-lyt-takeaways-f21</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/posts/2021-10-17-lyt-takeaways-f21</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
+            <link>https://jmill.dev/posts/lyt-takeaways-f21</link>
+            <guid isPermaLink="false">https://jmill.dev/posts/lyt-takeaways-f21</guid>
+            <dc:creator><![CDATA[Jonathan Miller]]></dc:creator>
             <pubDate>Sun, 17 Oct 2021 20:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[10 Favorite Takeaways from Write of Passage Fall '21]]></title>
             <description><![CDATA[Here are 10 of my favorite takeaways from Write of Passage Fall '21.]]></description>
-            <link>https://blog.maximeheckel.com/posts/2021-10-16-wop-takeaways-f21</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/posts/2021-10-16-wop-takeaways-f21</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
+            <link>https://jmill.dev/posts/wop-takeaways-f21</link>
+            <guid isPermaLink="false">https://jmill.dev/posts/wop-takeaways-f21</guid>
+            <dc:creator><![CDATA[Jonathan Miller]]></dc:creator>
             <pubDate>Sun, 17 Oct 2021 02:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Building a media inbox with Obsidian and Readwise]]></title>
             <description><![CDATA[In this tutorial, you will learn how to build a dynamic media inbox in Obsidian to process your Readwise highlights.]]></description>
-            <link>https://blog.maximeheckel.com/posts/2021-09-27-media-inbox-obsidian-readwise</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/posts/2021-09-27-media-inbox-obsidian-readwise</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
+            <link>https://jmill.dev/posts/media-inbox-obsidian-readwise</link>
+            <guid isPermaLink="false">https://jmill.dev/posts/media-inbox-obsidian-readwise</guid>
+            <dc:creator><![CDATA[Jonathan Miller]]></dc:creator>
             <pubDate>Mon, 27 Sep 2021 22:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Everything's a Graph]]></title>
             <description><![CDATA[Everything around us is either already a graph, or can be represented as a graph with a little bit of elbow grease.]]></description>
-            <link>https://blog.maximeheckel.com/posts/2021-09-22-everythings-a-graph</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/posts/2021-09-22-everythings-a-graph</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
+            <link>https://jmill.dev/posts/everythings-a-graph</link>
+            <guid isPermaLink="false">https://jmill.dev/posts/everythings-a-graph</guid>
+            <dc:creator><![CDATA[Jonathan Miller]]></dc:creator>
             <pubDate>Wed, 22 Sep 2021 12:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Integrated Writing Environments - A Digital Writing Studio]]></title>
             <description><![CDATA[Digital writing stands to gain in three major areas - representing the writing’s structure, searching our reference material for insights and support, and editing and stylizing our work-in-progress.]]></description>
-            <link>https://blog.maximeheckel.com/posts/2021-09-15-integrated-writing-environments</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/posts/2021-09-15-integrated-writing-environments</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
+            <link>https://jmill.dev/posts/integrated-writing-environments</link>
+            <guid isPermaLink="false">https://jmill.dev/posts/integrated-writing-environments</guid>
+            <dc:creator><![CDATA[Jonathan Miller]]></dc:creator>
             <pubDate>Thu, 16 Sep 2021 02:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Building a Fast, Responsive Blog & Portfolio Site with Next.js, Ghost CMS, Vercel, and DigitalOcean]]></title>
             <description><![CDATA[How I built this site using Next.js, GhostCMS, Vercel, and DigitalOcean, step by step.]]></description>
-            <link>https://blog.maximeheckel.com/posts/2021-09-10-building-a-portfolio-site-with-nexjs-ghost-cms</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/posts/2021-09-10-building-a-portfolio-site-with-nexjs-ghost-cms</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
+            <link>https://jmill.dev/posts/building-a-portfolio-site-with-nexjs-ghost-cms</link>
+            <guid isPermaLink="false">https://jmill.dev/posts/building-a-portfolio-site-with-nexjs-ghost-cms</guid>
+            <dc:creator><![CDATA[Jonathan Miller]]></dc:creator>
             <pubDate>Fri, 10 Sep 2021 14:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Just Post Something, Jonathan]]></title>
             <description><![CDATA[Hello World?]]></description>
-            <link>https://blog.maximeheckel.com/posts/2021-09-08-just-post-something-jonathan</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/posts/2021-09-08-just-post-something-jonathan</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
+            <link>https://jmill.dev/posts/just-post-something-jonathan</link>
+            <guid isPermaLink="false">https://jmill.dev/posts/just-post-something-jonathan</guid>
+            <dc:creator><![CDATA[Jonathan Miller]]></dc:creator>
             <pubDate>Wed, 08 Sep 2021 11:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[No title]]></title>
-            <link>https://blog.maximeheckel.com/posts/.DS_Store</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/posts/.DS_Store</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Invalid Date</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Card with glow effect on hover]]></title>
-            <link>https://blog.maximeheckel.com/snippets/2020-12-26-cardwithgloweffectonhover</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/snippets/2020-12-26-cardwithgloweffectonhover</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Sat, 26 Dec 2020 15:38:50 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Storing User Settings in a SwiftUI app using UserDefaults]]></title>
-            <link>https://blog.maximeheckel.com/snippets/2020-11-27-storing-user-settings-swift</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/snippets/2020-11-27-storing-user-settings-swift</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Fri, 27 Nov 2020 23:17:26 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Substack subscription serverless function]]></title>
-            <link>https://blog.maximeheckel.com/snippets/2020-11-12-substacksubscriptionserverlessfunction</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/snippets/2020-11-12-substacksubscriptionserverlessfunction</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Thu, 12 Nov 2020 23:17:26 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Simple test to ensure that all dependencies have a pinned version]]></title>
-            <link>https://blog.maximeheckel.com/snippets/2020-10-8-simpletesttoensurethatalldependencieshaveapinnedversion</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/snippets/2020-10-8-simpletesttoensurethatalldependencieshaveapinnedversion</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Thu, 08 Oct 2020 01:28:17 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Animated copy to clipboard button with Framer Motion and SVG]]></title>
-            <link>https://blog.maximeheckel.com/snippets/2020-9-26-animatedcopytoclipboardbuttonwithframermotionandsvg</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/snippets/2020-9-26-animatedcopytoclipboardbuttonwithframermotionandsvg</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Sat, 26 Sep 2020 16:57:07 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Semi transparent blur or frosted glass effect in SwiftUI]]></title>
-            <link>https://blog.maximeheckel.com/snippets/2020-9-1-semitransparentblurorfrostedglasseffectinswiftui</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/snippets/2020-9-1-semitransparentblurorfrostedglasseffectinswiftui</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Tue, 01 Sep 2020 23:09:32 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Animate LinearGradient on state change in SwiftUI]]></title>
-            <link>https://blog.maximeheckel.com/snippets/2020-8-23-animatelineargradientonstatechangeinswiftui</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/snippets/2020-8-23-animatelineargradientonstatechangeinswiftui</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Sun, 23 Aug 2020 22:32:22 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[SwiftUI TabView with PageTabViewStyle and full screen background colors]]></title>
-            <link>https://blog.maximeheckel.com/snippets/2020-8-23-swiftuitabviewwithpagetabviewstyleandfullscreenbackgroundcolors</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/snippets/2020-8-23-swiftuitabviewwithpagetabviewstyleandfullscreenbackgroundcolors</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Sun, 23 Aug 2020 00:16:40 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Waving Hand Animation with Framer Motion]]></title>
-            <link>https://blog.maximeheckel.com/snippets/2020-7-3-waving-hand-animation-framer-motion</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/snippets/2020-7-3-waving-hand-animation-framer-motion</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Fri, 03 Jul 2020 15:40:13 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Assert request properties with cypress]]></title>
-            <link>https://blog.maximeheckel.com/snippets/2020-6-11-assertrequestpropertieswithcypress</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/snippets/2020-6-11-assertrequestpropertieswithcypress</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Thu, 11 Jun 2020 15:44:49 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Cancel axios requests in a React context provider using refs]]></title>
-            <link>https://blog.maximeheckel.com/snippets/2020-5-22-cancelaxiosrequestsinareactcontextproviderusingrefs</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/snippets/2020-5-22-cancelaxiosrequestsinareactcontextproviderusingrefs</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Fri, 22 May 2020 14:59:51 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[First Code Snippet!]]></title>
-            <link>https://blog.maximeheckel.com/snippets/2020-5-19-firstcodesnippet</link>
-            <guid isPermaLink="false">https://blog.maximeheckel.com/snippets/2020-5-19-firstcodesnippet</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Tue, 19 May 2020 00:17:16 GMT</pubDate>
         </item>
     </channel>
 </rss>

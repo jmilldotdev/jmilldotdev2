@@ -1,4 +1,4 @@
 module.exports = {
-  about: '/about',
+  startHere: '/start-here',
   projects: '/projects',
 };

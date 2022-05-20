@@ -1,5 +1,5 @@
 import { css, Icon, VisuallyHidden } from '@maximeheckel/design-system';
-import { about } from 'config/internals';
+import { startHere } from 'config/internals';
 import { emailAddress, twitterUrl } from 'config/site';
 import Link from 'next/link';
 import { MAX_HEIGHT } from './constants';
@@ -38,10 +38,10 @@ const CommandCenterStatic = () => (
       </Link>
     </Item>
     <Item data-testid="navigation" key="design-navigation">
-      <Link href={about}>
+      <Link href={startHere}>
         <a>
           <Icon.Arrow size={4} />
-          <span style={{ marginLeft: '20px' }}>About</span>
+          <span style={{ marginLeft: '20px' }}>Start Here</span>
         </a>
       </Link>
     </Item>

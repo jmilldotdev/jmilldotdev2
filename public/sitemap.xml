@@ -8,161 +8,63 @@
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
 >
   <url>
-    <loc>https://blog.maximeheckel.com/design/</loc>
+    <loc>https://jmill.dev/about/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://blog.maximeheckel.com/</loc>
+    <loc>https://jmill.dev/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc
-      >https://blog.maximeheckel.com/snippets/2020-10-8-simpletesttoensurethatalldependencieshaveapinnedversion/</loc
-    >
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc
-      >https://blog.maximeheckel.com/snippets/2020-11-12-substacksubscriptionserverlessfunction/</loc
-    >
+    <loc>https://jmill.dev/projects/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc
-      >https://blog.maximeheckel.com/snippets/2020-11-27-storing-user-settings-swift/</loc
+      >https://jmill.dev/posts/building-a-portfolio-site-with-nexjs-ghost-cms/</loc
     >
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc
-      >https://blog.maximeheckel.com/snippets/2020-12-26-cardwithgloweffectonhover/</loc
-    >
+    <loc>https://jmill.dev/posts/everythings-a-graph/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc
-      >https://blog.maximeheckel.com/snippets/2020-5-19-firstcodesnippet/</loc
-    >
+    <loc>https://jmill.dev/posts/integrated-writing-environments/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc
-      >https://blog.maximeheckel.com/snippets/2020-5-22-cancelaxiosrequestsinareactcontextproviderusingrefs/</loc
-    >
+    <loc>https://jmill.dev/posts/just-post-something-jonathan/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc
-      >https://blog.maximeheckel.com/snippets/2020-6-11-assertrequestpropertieswithcypress/</loc
-    >
+    <loc>https://jmill.dev/posts/lyt-takeaways-f21/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc
-      >https://blog.maximeheckel.com/snippets/2020-7-3-waving-hand-animation-framer-motion/</loc
-    >
+    <loc>https://jmill.dev/posts/media-inbox-obsidian-readwise/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc
-      >https://blog.maximeheckel.com/snippets/2020-8-23-animatelineargradientonstatechangeinswiftui/</loc
-    >
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc
-      >https://blog.maximeheckel.com/snippets/2020-8-23-swiftuitabviewwithpagetabviewstyleandfullscreenbackgroundcolors/</loc
-    >
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc
-      >https://blog.maximeheckel.com/snippets/2020-9-1-semitransparentblurorfrostedglasseffectinswiftui/</loc
-    >
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc
-      >https://blog.maximeheckel.com/snippets/2020-9-26-animatedcopytoclipboardbuttonwithframermotionandsvg/</loc
-    >
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc
-      >https://blog.maximeheckel.com/posts/2021-09-08-just-post-something-jonathan/</loc
-    >
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc
-      >https://blog.maximeheckel.com/posts/2021-09-10-building-a-portfolio-site-with-nexjs-ghost-cms/</loc
-    >
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc
-      >https://blog.maximeheckel.com/posts/2021-09-15-integrated-writing-environments/</loc
-    >
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc
-      >https://blog.maximeheckel.com/posts/2021-09-22-everythings-a-graph/</loc
-    >
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc
-      >https://blog.maximeheckel.com/posts/2021-09-27-media-inbox-obsidian-readwise/</loc
-    >
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://blog.maximeheckel.com/posts/2021-10-16-wop-takeaways-f21/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://blog.maximeheckel.com/posts/2021-10-17-lyt-takeaways-f21/</loc>
+    <loc>https://jmill.dev/posts/wop-takeaways-f21/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>

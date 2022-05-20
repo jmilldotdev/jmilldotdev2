@@ -3,7 +3,7 @@ title: Building a media inbox with Obsidian and Readwise
 subtitle: In this tutorial, you will learn how to build a dynamic media inbox in Obsidian to process your Readwise highlights.
 date: '2021-09-27T22:00:00.000Z'
 categories: ['Tutorial']
-keywords: ['Obsidian']
+keywords: ['Obsidian', 'Readwise', 'Personal Knowledge Management']
 slug: media-inbox-obsidian-readwise
 type: 'blogPost'
 colorFeatured: 'linear-gradient(104.01deg, #9BEBEB 5.51%, #0FA6E9 98.93%)'
@@ -16,7 +16,9 @@ I love [Readwise](https://readwise.io). It makes collecting your highlights from
 Recently, Readwise updated their integration with [Obsidian](https://obsidian.md/) to include the last highlighted date as a property we can export. This lets us build an extremely flexible media inbox in Obsidian using the [Dataview](https://github.com/blacksmithgu/obsidian-dataview) plugin.
 
 In this tutorial, we will be building a dynamic table in Obsidian that grabs our most recent, unprocessed highlights notes. It will look something like this:
-![](__GHOST_URL__/content/images/2021/09/Screen-Shot-2021-09-27-at-6.25.12-PM-1.png)
+
+<img src="https://res.cloudinary.com/ddlvzfqbq/image/upload/v1653002401/jmill.dev/posts/media-inbox-obsidian-readwise/Pasted%20image%2020220519174933.png" alt="Pasted image 20220519174933.png"/>
+
 ## Prerequisites
 
 To follow along with this tutorial, make sure you have a Readwise account set up with some highlights. You can use [my referral link](https://readwise.io/i/jonathan903) to get a free month of Readwise to start!
@@ -26,9 +28,13 @@ Additionally, make sure you have the **Obsidian Official** and **Dataview** plug
 ## Configuring the Readwise plugin and export
 
 Go into the Obsidian settings, and go to the **Readwise Official** settings. First connect the plugin to your Readwise account, then you will see the following:
-![](__GHOST_URL__/content/images/2021/09/Screen-Shot-2021-09-27-at-5.46.00-PM.png)
+
+<img src="https://res.cloudinary.com/ddlvzfqbq/image/upload/v1653002401/jmill.dev/posts/media-inbox-obsidian-readwise/Pasted%20image%2020220519174954.png" alt="Pasted image 20220519174954.png"/>
+
 Then set the base folder that you will sync your export to, then click the customize button to be taken to the web interface for the Readwise export:
-![](__GHOST_URL__/content/images/2021/09/Screen-Shot-2021-09-27-at-6.04.34-PM.png)
+
+<img src="https://res.cloudinary.com/ddlvzfqbq/image/upload/v1653002401/jmill.dev/posts/media-inbox-obsidian-readwise/Pasted%20image%2020220519175002.png" alt="Pasted image 20220519175002.png"/>
+
 I have the following settings on this page:
 
 `Group Files In Category Folders`
@@ -142,5 +148,7 @@ There are *4 properties* to set here:
 - `statusTag` is the name of the tag you want to filter on. I have it set to grab #status/integrate as our unprocessed status tag, but you can leave it blank for no tag filtering.
 
 If all goes well you should have a table now that looks something like this:
-![](__GHOST_URL__/content/images/2021/09/Screen-Shot-2021-09-27-at-6.25.12-PM.png)
-Nice! If you have any questions, feel free to reach out to me on [Twitter](https://twitter.com/jmilldotdev) or in the Obsidian Discord (Soothsayer#6384)
+
+<img src="https://res.cloudinary.com/ddlvzfqbq/image/upload/v1653002402/jmill.dev/posts/media-inbox-obsidian-readwise/Pasted%20image%2020220519175025.png" alt="Pasted image 20220519175025.png"/>
+
+Nice! If you have any questions, feel free to reach out to me on [Twitter](https://twitter.com/jmilldotdev) or in the Obsidian Discord (jmill#1001)

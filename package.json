@@ -1,9 +1,9 @@
 {
-  "name": "blog.maximeheckel.com",
+  "name": "jmill.dev",
   "private": true,
-  "description": "blog.maximeheckel.com - Blog",
-  "version": "0.5.0",
-  "author": "Maxime Heckel <hello@maximeheckel.com>",
+  "description": "jmill.dev Personal Site",
+  "version": "0.1.0",
+  "author": "Jonathan Miller <jon@mill.dev>",
   "scripts": {
     "analyze": "cross-env ANALYZE=true next build",
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
@@ -17,11 +17,12 @@
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx}\"",
     "generate:index": "node ./scripts/generate-index",
     "generate:og": "node ./scripts/generate-opengraph-images",
+    "generate:posts": "node ./scripts/generate-posts",
     "generate:rss": "node ./scripts/generate-rss",
     "generate:sitemap": "node ./scripts/generate-sitemap",
     "initialize": "echo \"@maximeheckel:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=GITHUB_PACKAGES_READ_TOKEN\" >> .npmrc",
     "lint": "eslint --ext=jsx,ts,tsx .",
-    "prebuild": "yarn generate:index && yarn generate:og && yarn generate:rss && yarn generate:sitemap",
+    "prebuild": "yarn generate:posts && yarn generate:index && yarn generate:og && yarn generate:rss && yarn generate:sitemap",
     "start": "next start",
     "test": "is-ci \"test:coverage\" \"test:watch\"",
     "test:coverage": "jest --coverage",
@@ -96,8 +97,10 @@
     "@typescript-eslint/parser": "4.28.0",
     "babel-jest": "26.6.3",
     "babel-plugin-transform-dynamic-import": "2.1.0",
+    "cloudinary": "^1.30.0",
     "cross-env": "7.0.3",
     "cypress": "9.1.1",
+    "dotenv": "^16.0.1",
     "eslint": "7.29.0",
     "eslint-config-next": "11.0.1",
     "eslint-config-prettier": "7.1.0",
@@ -116,7 +119,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MaximeHeckel/blog.maximeheckel.com"
+    "url": "https://github.com/jmilldotdev/jmilldotdev2"
   },
   "jest": {
     "setupFilesAfterEnv": [

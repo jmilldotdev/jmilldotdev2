@@ -3,7 +3,10 @@ title: Everything's a Graph
 subtitle: Everything around us is either already a graph, or can be represented as a graph with a little bit of elbow grease.
 date: '2021-09-22T12:00:00.000Z'
 categories: ['Essay']
-keywords: []
+keywords: [
+	'Graphs',
+	'Machine Learning'
+]
 slug: everythings-a-graph
 type: 'blogPost'
 colorFeatured: 'linear-gradient(104.01deg, #9BEBEB 5.51%, #0FA6E9 98.93%)'
@@ -11,12 +14,20 @@ fontFeatured: '#000000'
 featured: true
 ---
 
-**This essay was written for [Write of Passage](https://writeofpassage.school/) Cohort 7,**for the prompt "What is your _unique perspective_?"\*\*
+**This essay was written for [Write of Passage](https://writeofpassage.school/) Cohort 7,  for the prompt "What is your _unique perspective?_"**
 
-*Spoiler alert: *You will be looking at graphs. And a bit of math. But not too much math. Pinky promise.
-![](__GHOST_URL__/content/images/2021/09/pasted-image-0--4-.png)_[Look at this graph.](https://www.youtube.com/watch?v=sIlNIVXpIns)_
+*Spoiler alert:* You will be looking at graphs. And a bit of math. But not too much math. Pinky promise.
+
+<img src="https://res.cloudinary.com/ddlvzfqbq/image/upload/v1653002403/jmill.dev/posts/everythings-a-graph/Pasted%20image%2020220519175310.png" alt="Pasted image 20220519175310.png"/>
+
+_[Look at this graph.](https://www.youtube.com/watch?v=sIlNIVXpIns)_
+
 To be clear, we are not talking about the company's-quarterly-financials-on-a-pie-chart kind of graph. Here, we are talking about the nodes-and-edges kind of graph, also known as a network. Graphs visually and mathematically describe **connectedness**.
-![](__GHOST_URL__/content/images/2021/09/image-1.png)A simple graph. [Source](https://fr.m.wikiversity.org/wiki/Fichier:Graph_example.svg)
+
+<img src="https://res.cloudinary.com/ddlvzfqbq/image/upload/v1653002401/jmill.dev/posts/everythings-a-graph/Pasted%20image%2020220519175319.png" alt="Pasted image 20220519175319.png"/>
+
+A simple graph. [Source](https://fr.m.wikiversity.org/wiki/Fichier:Graph_example.svg)
+
 Almost anything can be represented as a graph. Some things are obviously graphs, like your city's power grid. Some things can easily be imagined as graphs since they are naturally connected, like Wikipedia or your Twitter feed.
 
 Where it gets interesting is when you take subjects that are not obviously graphs and find ways to represent them as graphs. A physics simulation can be a graph. Animated MMA fighting can be a graph. A sentence in this article can be a graph. Even your own thoughts and ideas are a graph.
@@ -26,24 +37,49 @@ The graph is one of the most powerful tools we have for understanding the world 
 ## The Obvious Graphs
 
 Since graphs describe connectedness between things, this makes them ideal for showing things that are actually physically connected. Think of your city's power grid or the busy streets downtown. Wires hanging overhead are connected by poles, avenues are brought together by intersections.
-![](__GHOST_URL__/content/images/2021/09/Untitled.png)Power plants as a graph. [Source](https://www.nature.com/articles/sdata2018209)
+
+<img src="https://res.cloudinary.com/ddlvzfqbq/image/upload/v1653002401/jmill.dev/posts/everythings-a-graph/Pasted%20image%2020220519175332.png" alt="Pasted image 20220519175332.png"/>
+
+Power plants as a graph. [Source](https://www.nature.com/articles/sdata2018209)
+
 Graphs are useful for describing non-physical connections as well. They can be used to model who likes who in a [34-person karate club](https://en.wikipedia.org/wiki/Zachary%27s_karate_club) or [links between Wikipedia's 54 million pages](https://github.com/mirkonasato/graphipedia). Using connectedness, we can easily examine things like mutual friends and article cross-references and find interesting trends. For instance, out of Facebook's 2.85 billion users, any user is on average around [3.5 users apart](https://research.fb.com/blog/2016/02/three-and-a-half-degrees-of-separation/) from any other random user. Small world.
-![](__GHOST_URL__/content/images/2021/09/pasted-image-0--2-.png)A graph of U.S. Facebook users. [Source](https://nargaque.com/2010/12/16/the-map-of-facebook-connections/)
+
+<img src="https://res.cloudinary.com/ddlvzfqbq/image/upload/v1653002402/jmill.dev/posts/everythings-a-graph/Pasted%20image%2020220519175344.png" alt="Pasted image 20220519175344.png"/>
+
+A graph of U.S. Facebook users. [Source](https://nargaque.com/2010/12/16/the-map-of-facebook-connections/)
 
 ## The Less-Obvious Graphs
 
 Sometimes it is obvious how things connect, like downtown streets crossing at intersections, or Wikipedia articles referencing one another. When it is not as obvious how things should be connected, we must find creative ways to decide what makes a connection.
 
 Here's an example of a non-obvious graph: this sentence you're reading right now. The simplest graph representation of a sentence is a [path graph](https://en.wikipedia.org/wiki/Path_graph), where the first word connects to the second, the second to the third, etc. But you may remember mapping subjects to objects and identifying the verbs in a sentence from your high school English class. Language has dependencies which connect backwards and forwards through sentences and paragraphs.
-![](__GHOST_URL__/content/images/2021/09/pasted-image-0--5-.png)A sentence, remapped. [Source](https://writingcooperative.com/introductory-sentence-diagramming-for-dummies-e7021c2478d1)
+
+<img src="https://res.cloudinary.com/ddlvzfqbq/image/upload/v1653002401/jmill.dev/posts/everythings-a-graph/Pasted%20image%2020220519175355.png" alt="Pasted image 20220519175355.png"/>
+
+A sentence, remapped. [Source](https://writingcooperative.com/introductory-sentence-diagramming-for-dummies-e7021c2478d1)
+
 Taking advantage of the tree-like structure of language has allowed for applications such as [solving math word problems](https://arxiv.org/pdf/2004.13781.pdf). This is a possibly better approach than traditional text-mining methods due to the highly structured, right-or-wrong nature of answering these problems.
-![](__GHOST_URL__/content/images/2021/09/pasted-image-0--6-.png)_A bee has two legs. How many legs does one bee have?_[Source](https://arxiv.org/pdf/2004.13781.pdf)
+
+<img src="https://res.cloudinary.com/ddlvzfqbq/image/upload/v1653002400/jmill.dev/posts/everythings-a-graph/Pasted%20image%2020220519175404.png" alt="Pasted image 20220519175404.png"/>
+
+_A bee has two legs. How many legs does one bee have?_ [Source](https://arxiv.org/pdf/2004.13781.pdf)
+
 Another major breakthrough occurred in physical science in [DeepMind's AlphaFold](https://deepmind.com/blog/article/AlphaFold-Using-AI-for-scientific-discovery). AlphaFold is a solution to the [protein folding problem](https://en.wikipedia.org/wiki/Protein_folding), which is the task of predicting a protein's 3D structure from its amino acid sequence. AlphaFold is able to do this by representing the protein as a 'spatial graph', where the amino acids are the nodes, and the distance between the acids is how the edges are defined. Amino acids that are 'close enough' to one another are connected.
-![](__GHOST_URL__/content/images/2021/09/pasted-image-0--3-.png)Protein Folding. [Source](https://deepmind.com/blog/article/AlphaFold-Using-AI-for-scientific-discovery)
+
+<img src="https://res.cloudinary.com/ddlvzfqbq/image/upload/v1653002403/jmill.dev/posts/everythings-a-graph/Pasted%20image%2020220519175419.png" alt="Pasted image 20220519175419.png"/>
+
+Protein Folding. [Source](https://deepmind.com/blog/article/AlphaFold-Using-AI-for-scientific-discovery)
+
 A similar proximity graph approach can be used in other physical simulations to do things such as [simulate cloth in the wind ](https://www.youtube.com/watch?v=KfZFgSff9N8)or [animate fluid-looking martial arts](https://www.youtube.com/watch?v=SkJNxLYNwN0).
-![](__GHOST_URL__/content/images/2021/09/pasted-image-0--7-.png)A sheet in the wind. [Source](https://www.youtube.com/watch?v=KfZFgSff9N8)
+
+<img src="https://res.cloudinary.com/ddlvzfqbq/image/upload/v1653002402/jmill.dev/posts/everythings-a-graph/Pasted%20image%2020220519175429.png" alt="Pasted image 20220519175429.png"/>
+
+A sheet in the wind. [Source](https://www.youtube.com/watch?v=KfZFgSff9N8)
 
 ## Graphs and You
 
 Thinking of the problems you wrestle with in your life as graphs can help to give you a new perspective on how to solve them. Thinking of your friend network can help you decide that it makes sense to introduce these two of your friends that do not know one another. Thinking of your ideas and thoughts as a network can help you to find those truly unique connections you can build a career around. And you can think of minutes, days, and years as the unbroken chain graph that underpins everything you do.
-![](__GHOST_URL__/content/images/2021/09/image-2.png)My [Obsidian](https://obsidian.md/) personal knowledge graph, as of writing.
+
+<img src="https://res.cloudinary.com/ddlvzfqbq/image/upload/v1653002404/jmill.dev/posts/everythings-a-graph/Pasted%20image%2020220519175438.png" alt="Pasted image 20220519175438.png"/>
+
+My [Obsidian](https://obsidian.md/) personal knowledge graph, as of writing.
