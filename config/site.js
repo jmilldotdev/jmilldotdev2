@@ -20,8 +20,8 @@ module.exports = {
   title: 'Jonathan Miller',
   titleAlt: 'Jonathan Miller | Blog',
   description: "Hi I'm Jonathan",
-  url: process.env.NEXT_PUBLIC_BASE_URL, // Site domain without trailing slash
-  siteUrl: process.env.NEXT_PUBLIC_BASE_URL + '/', // url + pathPrefix
+  url: 'https://jmill.dev', // Site domain without trailing slash
+  siteUrl: 'https://jmill.dev' + '/', // url + pathPrefix
   siteLanguage: 'en', // Language Tag on <html> element
   logo: 'src/static/logo/logo.png',
   image: 'https://blog.maximeheckel.com/static/og/main-og-image.png',

@@ -1,6 +1,6 @@
 import { styled, Anchor, Text } from '@maximeheckel/design-system';
 import WebmentionReplies from '@theme/components/Webmentions/WebmentionReplies';
-import { twitter, twitterUrl } from 'config/site';
+import { twitterUrl } from 'config/site';
 import dynamic from 'next/dynamic';
 
 const NewsletterForm = dynamic(

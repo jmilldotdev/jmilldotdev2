@@ -2,7 +2,6 @@
 import {
   css,
   styled,
-  Anchor,
   Box,
   Button,
   Flex,
@@ -22,8 +21,7 @@ import Card from '@theme/components/Card';
 import Layout from '@theme/layout';
 import { getAllFilesFrontMatter } from 'lib/mdx';
 import { Post, PostType } from 'types/post';
-import { twitter, twitterUrl, url } from 'config/site';
-import { startHere, projects } from 'config/internals';
+import { twitter, twitterUrl } from 'config/site';
 
 const NewsletterForm = dynamic(
   () => import('@theme/components/NewsletterForm')
