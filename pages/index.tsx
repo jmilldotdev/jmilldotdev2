@@ -79,19 +79,6 @@ const IndexPage = (props: Props) => {
                 Link redirects to my projects page: {url + projects}
               </VisuallyHidden>
             </a>
-            <a
-              href={twitterUrl}
-              style={{ textDecoration: 'none' }}
-              tabIndex={-1}
-            >
-              <Button variant="secondary" endIcon={<Icon.Twitter />}>
-                {twitter}
-              </Button>
-              <VisuallyHidden as="p">
-                Link redirects to my Twitter profile page
-                {twitterUrl}
-              </VisuallyHidden>
-            </a>
           </Flex>
         </Box>
         <section>
