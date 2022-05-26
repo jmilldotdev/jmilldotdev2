@@ -18,6 +18,7 @@
     "generate:index": "node ./scripts/generate-index",
     "generate:og": "node ./scripts/generate-opengraph-images",
     "generate:posts": "node ./scripts/generate-posts",
+    "generate:projects": "node ./scripts/generate-projects",
     "generate:rss": "node ./scripts/generate-rss",
     "generate:sitemap": "node ./scripts/generate-sitemap",
     "initialize": "echo \"@maximeheckel:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=GITHUB_PACKAGES_READ_TOKEN\" >> .npmrc",

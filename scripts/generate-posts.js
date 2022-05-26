@@ -6,10 +6,10 @@ var cloudinary = require('cloudinary').v2;
 
 (async () => {
   console.info(chalk.cyan('info'), ` - Generating Posts`);
-  const CMS_DIR = process.env.CMS_DIR;
+  const CMS_DIR = process.env.CMS_DIR + '/posts';
   const IMG_DIR = process.env.IMG_DIR;
   const ROOT_DIR = process.cwd();
-  const POSTS_DIR = `${ROOT_DIR}/content`;
+  const POSTS_DIR = `${ROOT_DIR}/content/posts`;
   const IMAGE_REGEX = /\!\[\[(.+)\]\]/g;
 
   const getImages = (mdfile) => {

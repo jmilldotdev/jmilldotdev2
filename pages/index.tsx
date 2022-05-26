@@ -10,18 +10,17 @@ import {
   VisuallyHidden,
   H1,
   H2,
-  H3,
 } from '@maximeheckel/design-system';
 import { format } from 'date-fns';
-import { motion, MotionProps } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Grid from '@theme/components/Grid';
-import Card from '@theme/components/Card';
 import Layout from '@theme/layout';
 import { getAllFilesFrontMatter } from 'lib/mdx';
 import { Post, PostType } from 'types/post';
-import { twitter, twitterUrl } from 'config/site';
+import { twitter, twitterUrl, url } from 'config/site';
+import { projects, startHere } from 'config/internals';
+import FeaturedPostCard from '@theme/components/FeaturedPostCard';
 
 const NewsletterForm = dynamic(
   () => import('@theme/components/NewsletterForm')
@@ -31,49 +30,7 @@ interface Props {
   posts: Post[];
 }
 
-const WavingHand = () => (
-  <motion.div
-    style={{
-      marginBottom: '-20px',
-      marginRight: '-45px',
-      paddingBottom: '20px',
-      paddingRight: '45px',
-      display: 'inline-block',
-    }}
-    animate={{ rotate: 20 }}
-    transition={{
-      repeat: 7,
-      repeatType: 'mirror',
-      duration: 0.2,
-      delay: 0.5,
-      ease: 'easeInOut',
-      type: 'tween',
-    }}
-  >
-    👋🏻
-  </motion.div>
-);
-
 let year = 0;
-
-const cardVariants = {
-  hover: {
-    scale: 1.05,
-  },
-  initial: {
-    scale: 1,
-  },
-};
-
-const glowVariants = {
-  hover: {
-    opacity: 0.8,
-  },
-  initial: {
-    scale: 1.05,
-    opacity: 0,
-  },
-};
 
 const wrapperGrid = css({
   '> *': {
@@ -89,11 +46,10 @@ const IndexPage = (props: Props) => {
       <Grid columns="medium" gapX={4} gapY={12} className={wrapperGrid()}>
         <Box>
           <H1>
-            Hi <WavingHand /> I'm Jonathan, and this is my blog.{' '}
+            Hey, I'm jmill.{' '}
             <Text variant="secondary" size="7" weight="4">
-              Here, I write about anything interesting to me, including AI art,
-              Language Models, Cryptocurrency & NFTs, and the future of
-              communities.
+              I'm a software engineer, creative coder, writer, and information
+              nerd. Welcome to my humble internet home. 🏡
             </Text>
           </H1>
           <Flex
@@ -103,7 +59,7 @@ const IndexPage = (props: Props) => {
               marginRight: '-var(--space-3)',
             }}
           >
-            {/* <a
+            <a
               href={startHere}
               style={{ textDecoration: 'none' }}
               tabIndex={-1}
@@ -122,7 +78,7 @@ const IndexPage = (props: Props) => {
               <VisuallyHidden as="p">
                 Link redirects to my projects page: {url + projects}
               </VisuallyHidden>
-            </a> */}
+            </a>
             <a
               href={twitterUrl}
               style={{ textDecoration: 'none' }}
@@ -139,11 +95,7 @@ const IndexPage = (props: Props) => {
           </Flex>
         </Box>
         <section>
-          <H2>Newsletter</H2>
-          <NewsletterForm large />
-        </section>
-        <section>
-          <H2>Featured</H2>
+          <H2>Featured Articles</H2>
           <Grid
             as="ul"
             css={{
@@ -158,87 +110,10 @@ const IndexPage = (props: Props) => {
               .filter((post) => post.featured)
               .map((post) => {
                 return (
-                  <motion.li
-                    style={{
-                      position: 'relative',
-                      marginLeft: '-var(--space-1)',
-                      marginRight: '-var(--space-1)',
-                      listStyle: 'none',
-                      cursor: 'pointer',
-                      marginBottom: 'calc(1.45rem / 2)',
-                      lineHeight: '1.9',
-                      letterSpacing: '0.3px',
-                    }}
+                  <FeaturedPostCard
+                    post={post}
                     key={post.slug}
-                    data-testid="featured-article-item"
-                    initial="initial"
-                    whileHover="hover"
-                  >
-                    <Link href={`/posts/${post.slug}/`}>
-                      <a
-                        style={{
-                          textDecoration: 'none',
-                          color:
-                            'var(--maximeheckel-colors-typeface-secondary)',
-                        }}
-                      >
-                        <Glow
-                          css={{
-                            background: post.colorFeatured,
-                          }}
-                          variants={glowVariants}
-                          transition={{
-                            type: 'tween',
-                            ease: 'easeOut',
-                            duration: 0.4,
-                          }}
-                        />
-                        <Box
-                          css={{
-                            height: '95%',
-                            width: '105%',
-                            position: 'absolute',
-                            borderRadius: 'var(--border-radius-2)',
-                            top: '50%',
-                            left: '50%',
-                            background: 'var(--maximeheckel-colors-body)',
-                            transform: 'translateY(-50%) translateX(-50%)',
-                            filter: 'blur(20px)',
-                            transition: '0.5s',
-
-                            '@media(max-width: 700px)': {
-                              display: 'none',
-                            },
-                          }}
-                        />
-                        <Card<MotionProps>
-                          as={motion.div}
-                          variants={cardVariants}
-                          transition={{
-                            type: 'tween',
-                            ease: 'easeOut',
-                            duration: 0.4,
-                          }}
-                          depth={1}
-                        >
-                          <Card.Body>
-                            <H3
-                              gradient
-                              css={{
-                                marginBottom: '8px',
-                                backgroundImage: post.colorFeatured!,
-                              }}
-                            >
-                              {post.title}
-                            </H3>
-                            <Text as="p" css={{ marginBottom: '0px' }}>
-                              {post.subtitle}
-                            </Text>
-                          </Card.Body>
-                        </Card>
-                      </a>
-                    </Link>
-                  </motion.li>
+                  ></FeaturedPostCard>
                 );
               })}
           </Grid>
@@ -314,6 +189,10 @@ const IndexPage = (props: Props) => {
             })}
           </Grid>
         </section>
+        <section>
+          <H2>Newsletter</H2>
+          <NewsletterForm large />
+        </section>
       </Grid>
     </Layout>
   );
@@ -324,17 +203,6 @@ export async function getStaticProps() {
 
   return { props: { posts } };
 }
-
-const Glow = styled(motion.div, {
-  position: 'absolute',
-  top: '0',
-  left: '0',
-  width: '100%',
-  height: '100%',
-  webkitFilter: 'blur(15px)',
-  filter: 'blur(15px)',
-  borderRadius: 'var(--border-radius-2)',
-});
 
 const Block = styled(Box, {
   display: 'flex',

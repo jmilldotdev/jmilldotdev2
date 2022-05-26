@@ -4,9 +4,18 @@ import Script from 'next/script';
 
 class MyDocument extends Document {
   render() {
+    const isProduction = process.env.NODE_ENV === 'production';
+
     return (
       <Html lang="en">
         <Head>
+          {isProduction && (
+            <script
+              defer
+              data-domain="jmill.dev"
+              src="https://plausible.io/js/plausible.js"
+            />
+          )}
           <link
             rel="preload"
             href="/fonts/inter-var-latin.woff2"
@@ -87,12 +96,9 @@ class MyDocument extends Document {
           <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
           <link
             rel="webmention"
-            href="https://webmention.io/blog.maximeheckel.com/webmention"
+            href="https://webmention.io/jmill.dev/webmention"
           />
-          <link
-            rel="pingback"
-            href="https://webmention.io/blog.maximeheckel.com/xmlrpc"
-          />
+          <link rel="pingback" href="https://webmention.io/jmill.dev/xmlrpc" />
           <style
             id="stitches"
             dangerouslySetInnerHTML={{ __html: getCssText() }}

@@ -19,7 +19,8 @@ module.exports = {
   ],
   title: 'Jonathan Miller',
   titleAlt: 'Jonathan Miller | Blog',
-  description: "Hi I'm Jonathan",
+  description:
+    "I'm Jonathan and I am a nomadic programmer. Here I write about coding, blockchain & cryptocurrency, AI art, social networks, information management, and whatever else interests me.",
   url: 'https://jmill.dev', // Site domain without trailing slash
   siteUrl: 'https://jmill.dev' + '/', // url + pathPrefix
   siteLanguage: 'en', // Language Tag on <html> element
@@ -34,6 +35,6 @@ module.exports = {
   twitterUrl: 'https://twitter.com/jmilldotdev', // Twitter Site URL
   twitterDesc: 'Jonathan Miller is that dude',
   githubUrl: 'https://github.com/jmilldotdev',
-  newsletterArchiveUrl: 'https://buttondown.email/jmill/archive',
+  newsletterArchiveUrl: 'https://mirror.xyz/jmill.eth',
   emailAddress: 'jon@jmill.dev',
 };

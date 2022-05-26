@@ -8,11 +8,12 @@ const matter = require('gray-matter');
 (async () => {
   console.info(chalk.cyan('info'), ` - Generating RSS feed`);
 
-  const root = process.cwd();
+  const root = process.cwd() + '/content';
 
   const typeToPath = {
-    blog: 'content',
+    blog: 'posts',
     snippet: 'snippets',
+    project: 'projects',
   };
 
   function getPosts(type) {

@@ -3,6 +3,7 @@ import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 export enum PostType {
   SNIPPET = 'snippet',
   BLOGPOST = 'blogPost',
+  PROJECT = 'project',
 }
 
 export type ReadingTime = {
@@ -39,6 +40,17 @@ export type Snippet = {
   description: string;
   snippetImage: string;
   type: PostType.SNIPPET;
+};
+
+export type Project = {
+  slug: string;
+  title: string;
+  description: string;
+  category: string;
+  featured: boolean;
+  colorFeatured?: string;
+  type: PostType.PROJECT;
+  github: string;
 };
 
 export type FrontMatterSnippet = {
