@@ -41,10 +41,10 @@ const wrapperGrid = css({
 
 const IndexPage = (props: Props) => {
   const { posts } = props;
-  const isMobile = useMediaQuery({
+  const screenIsMobile = useMediaQuery({
     query: '(max-width: 768px)',
   });
-  const offsetHeight = isMobile ? 128 : 256;
+  const offsetHeight = screenIsMobile ? 128 : 256;
 
   return (
     <Layout footer header headerProps={{ offsetHeight }}>
