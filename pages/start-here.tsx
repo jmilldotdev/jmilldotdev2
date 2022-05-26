@@ -30,7 +30,7 @@ const StartHerePage = () => {
           <div style={{ textAlign: 'center', marginBottom: 30 }}>
             <Image
               src="/static/images/me-sq.jpg"
-              alt="a picture of me"
+              alt="A picture of me"
               width={200}
               height={200}
               className={roundedFull()}
