@@ -18,7 +18,7 @@ import Grid from '@theme/components/Grid';
 import Layout from '@theme/layout';
 import { getAllFilesFrontMatter } from 'lib/mdx';
 import { Post, PostType } from 'types/post';
-import { twitter, twitterUrl, url } from 'config/site';
+import { url } from 'config/site';
 import { projects, startHere } from 'config/internals';
 import FeaturedPostCard from '@theme/components/FeaturedPostCard';
 
