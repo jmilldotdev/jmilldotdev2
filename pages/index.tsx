@@ -21,7 +21,6 @@ import { Post, PostType } from 'types/post';
 import { url } from 'config/site';
 import { projects, startHere } from 'config/internals';
 import FeaturedPostCard from '@theme/components/FeaturedPostCard';
-import { useMediaQuery } from '@theme/hooks/useMediaQuery';
 
 const NewsletterForm = dynamic(
   () => import('@theme/components/NewsletterForm')
