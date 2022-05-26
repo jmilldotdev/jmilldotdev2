@@ -8,12 +8,6 @@
   xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
 >
   <url>
-    <loc>https://jmill.dev/about/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
     <loc>https://jmill.dev/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -26,45 +20,107 @@
   </url>
 
   <url>
+    <loc>https://jmill.dev/start-here/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc
-      >https://jmill.dev/posts/building-a-portfolio-site-with-nexjs-ghost-cms/</loc
+      >https://jmill.dev/posts/posts/building-a-portfolio-site-with-nexjs-ghost-cms/</loc
     >
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://jmill.dev/posts/everythings-a-graph/</loc>
+    <loc>https://jmill.dev/posts/posts/everythings-a-graph/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://jmill.dev/posts/integrated-writing-environments/</loc>
+    <loc>https://jmill.dev/posts/posts/integrated-writing-environments/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://jmill.dev/posts/just-post-something-jonathan/</loc>
+    <loc>https://jmill.dev/posts/posts/just-post-something-jonathan/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://jmill.dev/posts/lyt-takeaways-f21/</loc>
+    <loc>https://jmill.dev/posts/posts/lyt-takeaways-f21/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://jmill.dev/posts/media-inbox-obsidian-readwise/</loc>
+    <loc>https://jmill.dev/posts/posts/media-inbox-obsidian-readwise/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://jmill.dev/posts/wop-takeaways-f21/</loc>
+    <loc>https://jmill.dev/posts/posts/wop-takeaways-f21/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmill.dev/posts/projects/doomer/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmill.dev/posts/projects/marsbots-core/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmill.dev/posts/projects/obsidian-corkboard/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc
+      >https://jmill.dev/posts/projects/obsidian-frontmatter-tag-suggest/</loc
+    >
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmill.dev/posts/projects/obsidian-gpt/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmill.dev/posts/projects/obsidian-wikipedia/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmill.dev/posts/projects/tarot-bot/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmill.dev/posts/projects/viper-bot/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmill.dev/posts//snippets/first/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>

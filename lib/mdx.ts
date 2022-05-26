@@ -8,11 +8,12 @@ import { remarkSectionize } from './remark-sectionize-fork';
 import { remarkFigure } from './remark-figure';
 
 const typeToPath = {
-  [PostType.BLOGPOST]: 'content',
+  [PostType.BLOGPOST]: 'posts',
   [PostType.SNIPPET]: 'snippets',
+  [PostType.PROJECT]: 'projects',
 };
 
-const root = process.cwd();
+const root = process.cwd() + '/content';
 
 export const getFiles = async (type: PostType) => {
   return fs.readdirSync(path.join(root, typeToPath[type]));

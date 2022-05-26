@@ -2,15 +2,17 @@ import axios from 'axios';
 
 const subscribeEndpoint = async (req, res) => {
   const { email } = req.body;
-  const API_ROUTE = 'https://api.buttondown.email/v1/subscribers';
-  const API_KEY = process.env.BUTTONDOWN_API_KEY;
+  const CONVERTKIT_NEWSLETTER_FORM_ID =
+    process.env.CONVERTKIT_NEWSLETTER_FORM_ID;
+  const CONVERTKIT_API_KEY = process.env.CONVERTKIT_API_KEY;
+  const API_ROUTE = `https://api.convertkit.com/v3/forms/${CONVERTKIT_NEWSLETTER_FORM_ID}/subscribe`;
 
-  const headers = {
-    'Content-Type': 'application/json',
-    Authorization: `Token ${API_KEY}`,
+  const data = {
+    email,
+    api_key: CONVERTKIT_API_KEY,
   };
-  const data = await axios.post(API_ROUTE, { email }, { headers });
-  res.status(200).json(data.data);
+  const r = await axios.post(API_ROUTE, data);
+  res.status(200).json(r.data);
 };
 
 export default subscribeEndpoint;

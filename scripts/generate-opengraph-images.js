@@ -11,7 +11,7 @@ const qs = require('qs');
 const ogImageDir = `./public/static/og`;
 
 (async () => {
-  const root = process.cwd();
+  const root = process.cwd() + '/content';
 
   console.info(chalk.cyan('info'), ` - Generating Opengraph images`);
 
@@ -23,13 +23,10 @@ const ogImageDir = `./public/static/og`;
     return;
   }
 
-  const files = fs.readdirSync(path.join(root, 'content'));
+  const files = fs.readdirSync(path.join(root, 'posts'));
 
   const posts = files.reduce((allPosts, postSlug) => {
-    const source = fs.readFileSync(
-      path.join(root, 'content', postSlug),
-      'utf8'
-    );
+    const source = fs.readFileSync(path.join(root, 'posts', postSlug), 'utf8');
     const { data } = matter(source);
     return [
       {

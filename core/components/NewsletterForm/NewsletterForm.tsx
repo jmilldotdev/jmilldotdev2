@@ -92,8 +92,7 @@ const NewsletterForm = (props: Props) => {
               maxWidth: '600px',
             }}
           >
-            Get a behind the scenes look at what I&apos;m currently learning,
-            exploring, and creating.
+            Want more jmill in your life?
           </H3>
         ) : (
           <H3
@@ -101,7 +100,7 @@ const NewsletterForm = (props: Props) => {
               maxWidth: '600px',
             }}
           >
-            Subscribe to my newsletter
+            Want more jmill in your life?
           </H3>
         )}
         {large ? (
@@ -129,8 +128,8 @@ const NewsletterForm = (props: Props) => {
                   }}
                   variant="secondary"
                 >
-                  Deep dives into some of my <EM>ideas and secret projects</EM>{' '}
-                  that will inspire you
+                  A quick recap of <EM>the coolest stuff I wrote and built</EM>{' '}
+                  each month.
                 </Text>
               </List.Item>
               <List.Item>
@@ -141,8 +140,9 @@ const NewsletterForm = (props: Props) => {
                   }}
                   variant="secondary"
                 >
-                  <EM>Exclusive previews of upcoming articles</EM> on AI art and
-                  Cryptocurrency
+                  <EM>Exclusive previews</EM>{' '}
+                  {`of the top-secret stuff I'm
+                  working on`}
                 </Text>
               </List.Item>
             </List>
@@ -156,8 +156,8 @@ const NewsletterForm = (props: Props) => {
               }}
               variant="secondary"
             >
-              Get email from me about my ideas, as well as exclusive previews of
-              upcoming articles.
+              Get a monthly email from me about my ideas, as well as exclusive
+              previews of upcoming articles and projects.
             </Text>
             <br />
           </>
@@ -299,23 +299,9 @@ const NewsletterForm = (props: Props) => {
         {error ? (
           // @ts-ignore
           error.message.includes('already subscribed') ? (
-            <ErrorMessage>
-              Looks like you already subscribed! If you think this is a mistake
-              you can still subscribe by heading directly to my{' '}
-              <Anchor href={newsletterArchiveUrl} underline>
-                Buttondown publication
-              </Anchor>
-              .
-            </ErrorMessage>
+            <ErrorMessage>Looks like you already subscribed!</ErrorMessage>
           ) : (
-            <ErrorMessage>
-              😬 woops! We just hit a snag here, but don&apos;t worry! You can
-              still subscribe by heading directly to my{' '}
-              <Anchor href={newsletterArchiveUrl} underline>
-                Buttondown publication
-              </Anchor>
-              .
-            </ErrorMessage>
+            <ErrorMessage>Whoops! We just hit a snag here.</ErrorMessage>
           )
         ) : null}
         {isSuccess ? (

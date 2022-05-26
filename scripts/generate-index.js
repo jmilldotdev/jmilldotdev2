@@ -9,12 +9,13 @@ const lunr = require('lunr');
 (async () => {
   console.info(chalk.cyan('info'), ` - Generating Lunr search index`);
 
-  const root = process.cwd();
+  const root = process.cwd() + '/content';
   const prettierConfig = await prettier.resolveConfig('./.prettierrc');
 
   const typeToPath = {
-    blog: 'content',
+    blog: 'posts',
     snippet: 'snippets',
+    project: 'projects',
   };
 
   function getPosts(type) {
