@@ -21,6 +21,7 @@ import { Post, PostType } from 'types/post';
 import { url } from 'config/site';
 import { projects, startHere } from 'config/internals';
 import FeaturedPostCard from '@theme/components/FeaturedPostCard';
+import { useMediaQuery } from 'react-responsive';
 
 const NewsletterForm = dynamic(
   () => import('@theme/components/NewsletterForm')
@@ -40,9 +41,13 @@ const wrapperGrid = css({
 
 const IndexPage = (props: Props) => {
   const { posts } = props;
+  const isMobile = useMediaQuery({
+    query: '(max-width: 768px)',
+  });
+  const offsetHeight = isMobile ? 128 : 256;
 
   return (
-    <Layout footer header headerProps={{ offsetHeight: 256 }}>
+    <Layout footer header headerProps={{ offsetHeight }}>
       <Grid columns="medium" gapX={4} gapY={12} className={wrapperGrid()}>
         <Box>
           <H1>
