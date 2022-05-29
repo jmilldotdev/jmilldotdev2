@@ -15,6 +15,7 @@
     "dev": "next-remote-watch ./content",
     "export": "next export",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx}\"",
+    "generate:content": "yarn generate:posts && yarn generate:projects",
     "generate:index": "node ./scripts/generate-index",
     "generate:og": "node ./scripts/generate-opengraph-images",
     "generate:posts": "node ./scripts/generate-posts",
