@@ -31,17 +31,21 @@ var cloudinary = require('cloudinary').v2;
       const imagePath = `${IMG_DIR}/${image}`;
       const imageName = image.split('/').pop().replace('.png', '');
       console.info(chalk.cyan('info'), ` - Uploading image ${imageName}`);
-      const imageUpload = await cloudinary.uploader.upload(imagePath, {
-        public_id: imageName,
-        resource_type: 'auto',
-        folder: `jmill.dev/projects/${projectName}`,
-        overwrite: false,
-      });
-      console.info(chalk.green('info'), ` - Uploaded ${image}`);
-      return {
-        image: image,
-        url: imageUpload.secure_url,
-      };
+      try {
+        const imageUpload = await cloudinary.uploader.upload(imagePath, {
+          public_id: imageName,
+          resource_type: 'auto',
+          folder: `jmill.dev/projects/${projectName}`,
+          overwrite: false,
+        });
+        console.info(chalk.green('info'), ` - Uploaded ${image}`);
+        return {
+          image: image,
+          url: imageUpload.secure_url,
+        };
+      } catch (err) {
+        console.error(chalk.red('error'), ` - Error uploading ${image}`);
+      }
     });
 
     // Resolve all promises

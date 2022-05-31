@@ -4,7 +4,15 @@ export enum PostType {
   SNIPPET = 'snippet',
   BLOGPOST = 'blogPost',
   PROJECT = 'project',
+  NOTE = 'note',
 }
+
+export const typeToPath = {
+  [PostType.BLOGPOST]: 'posts',
+  [PostType.SNIPPET]: 'snippets',
+  [PostType.PROJECT]: 'projects',
+  [PostType.NOTE]: 'notes',
+};
 
 export type ReadingTime = {
   text: string;
@@ -50,7 +58,14 @@ export type Project = {
   featured: boolean;
   colorFeatured?: string;
   type: PostType.PROJECT;
-  github: string;
+  github?: string;
+  cover?: string;
+};
+
+export type Note = {
+  title: string;
+  slug: string;
+  type: PostType.NOTE;
 };
 
 export type FrontMatterSnippet = {

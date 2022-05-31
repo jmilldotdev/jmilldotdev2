@@ -4,17 +4,12 @@ const fs = require('fs');
 const path = require('path');
 const RSS = require('rss');
 const matter = require('gray-matter');
+const { typeToPath } = require('types/post');
 
 (async () => {
   console.info(chalk.cyan('info'), ` - Generating RSS feed`);
 
   const root = process.cwd() + '/content';
-
-  const typeToPath = {
-    blog: 'posts',
-    snippet: 'snippets',
-    project: 'projects',
-  };
 
   function getPosts(type) {
     const files = fs

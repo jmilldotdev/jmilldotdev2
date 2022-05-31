@@ -1,12 +1,12 @@
 import { Card, H3, Text } from '@maximeheckel/design-system';
+import { projects } from 'config/internals';
 import Link from 'next/link';
 import React from 'react';
 import { Project } from 'types/post';
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    // <Link href={`/projects/${project.slug}/`}>
-    <Link href={project.github}>
+    <Link href={`${projects}/${project.slug}`}>
       <a
         style={{
           textDecoration: 'none',

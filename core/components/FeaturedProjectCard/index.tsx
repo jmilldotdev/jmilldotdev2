@@ -1,4 +1,5 @@
 import { Box, Card, H3, styled, Text } from '@maximeheckel/design-system';
+import { projects } from 'config/internals';
 import { motion, MotionProps } from 'framer-motion';
 import Link from 'next/link';
 import React from 'react';
@@ -41,8 +42,7 @@ const FeaturedProjectCard = ({ project }: { project: Project }) => {
       initial="initial"
       whileHover="hover"
     >
-      {/* <Link href={`/projects/${project.slug}/`}> */}
-      <Link href={project.github}>
+      <Link href={`${projects}/${project.slug}`}>
         <a
           style={{
             textDecoration: 'none',

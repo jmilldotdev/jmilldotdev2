@@ -1,7 +1,6 @@
 import { styled } from '@maximeheckel/design-system';
 import Image from 'next/image';
 import React from 'react';
-import { loader } from '../../../lib/next-image-loader';
 import { H1 } from '../Typography';
 interface HeroImgProps {
   src: string;
@@ -53,19 +52,21 @@ const HeroImgWrapper = styled('div', {
   },
 });
 
-const HeroImg = (props: HeroImgProps) => (
-  <HeroImgWrapper>
-    <Image
-      className={props.className}
-      src={props.src}
-      alt="cover"
-      layout="fill"
-      objectFit="cover"
-      loader={loader}
-      priority
-    />
-  </HeroImgWrapper>
-);
+const HeroImg = (props: HeroImgProps) => {
+  const src = props.src.split('"')[1].split('"')[0];
+  return (
+    <HeroImgWrapper>
+      <Image
+        className={props.className}
+        src={src}
+        alt="cover"
+        layout="fill"
+        objectFit="cover"
+        priority
+      />
+    </HeroImgWrapper>
+  );
+};
 
 class Hero extends React.Component<{
   id?: string;

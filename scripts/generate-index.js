@@ -5,18 +5,13 @@ const path = require('path');
 const matter = require('gray-matter');
 const prettier = require('prettier');
 const lunr = require('lunr');
+const { typeToPath } = require('types/post');
 
 (async () => {
   console.info(chalk.cyan('info'), ` - Generating Lunr search index`);
 
   const root = process.cwd() + '/content';
   const prettierConfig = await prettier.resolveConfig('./.prettierrc');
-
-  const typeToPath = {
-    blog: 'posts',
-    snippet: 'snippets',
-    project: 'projects',
-  };
 
   function getPosts(type) {
     const files = fs

@@ -19,7 +19,7 @@ import Layout from '@theme/layout';
 import { getAllFilesFrontMatter } from 'lib/mdx';
 import { Post, PostType } from 'types/post';
 import { url } from 'config/site';
-import { projects, startHere } from 'config/internals';
+import { notes, projects, startHere } from 'config/internals';
 import FeaturedPostCard from '@theme/components/FeaturedPostCard';
 
 const NewsletterForm = dynamic(
@@ -78,6 +78,14 @@ const IndexPage = (props: Props) => {
               </Button>
               <VisuallyHidden as="p">
                 Link redirects to my projects page: {url + projects}
+              </VisuallyHidden>
+            </a>
+            <a href={notes} style={{ textDecoration: 'none' }} tabIndex={-1}>
+              <Button variant="secondary" endIcon={<Icon.External />}>
+                Notebook
+              </Button>
+              <VisuallyHidden as="p">
+                Link redirects to my notes page: {url + notes}
               </VisuallyHidden>
             </a>
           </Flex>

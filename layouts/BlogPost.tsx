@@ -71,7 +71,7 @@ const BlogLayout = ({ children, frontMatter, ogImage }: Props) => {
 
   const headerProps = {
     title,
-    offsetHeight: 256,
+    offsetHeight: 128,
     showProgressBarOnMobile: true,
   };
 

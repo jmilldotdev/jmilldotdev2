@@ -3,15 +3,14 @@ import matter from 'gray-matter';
 import path from 'path';
 import readingTime from 'reading-time';
 import { serialize } from 'next-mdx-remote/serialize';
-import { FrontMatterPostType, PostByType, PostType } from 'types/post';
+import {
+  FrontMatterPostType,
+  PostByType,
+  PostType,
+  typeToPath,
+} from 'types/post';
 import { remarkSectionize } from './remark-sectionize-fork';
 import { remarkFigure } from './remark-figure';
-
-const typeToPath = {
-  [PostType.BLOGPOST]: 'posts',
-  [PostType.SNIPPET]: 'snippets',
-  [PostType.PROJECT]: 'projects',
-};
 
 const root = process.cwd() + '/content';
 
