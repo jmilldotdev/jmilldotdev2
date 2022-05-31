@@ -4,10 +4,10 @@ import { getFileBySlug, getFiles } from 'lib/mdx';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import { useRouter } from 'next/router';
-import { PostType, Note } from 'types/post';
+import { PostType, Note, FrontMatter } from 'types/post';
 
 interface NoteProps {
-  note?: Note;
+  note?: FrontMatter<Note>;
 }
 
 const Note = ({ note }: NoteProps) => {
@@ -18,7 +18,7 @@ const Note = ({ note }: NoteProps) => {
   }
 
   return (
-    <NoteLayout frontMatter={note.frontMatter}>
+    <NoteLayout note={note}>
       <MDXRemote
         {...note.mdxSource}
         components={{

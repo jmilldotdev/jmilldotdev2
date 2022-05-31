@@ -3,11 +3,11 @@ import { getFileBySlug, getFiles } from 'lib/mdx';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import { useRouter } from 'next/router';
-import { FrontMatterSnippet, PostType, Project } from 'types/post';
+import { FrontMatter, PostType, Project } from 'types/post';
 import MDXComponents from '@theme/components/MDX/MDXComponents';
 
 interface ProjectProps {
-  project?: FrontMatterSnippet;
+  project?: FrontMatter<Project>;
 }
 
 const Project = ({ project }: ProjectProps) => {
@@ -18,7 +18,7 @@ const Project = ({ project }: ProjectProps) => {
   }
 
   return (
-    <ProjectLayout frontMatter={project.frontMatter}>
+    <ProjectLayout project={project}>
       <MDXRemote
         {...project.mdxSource}
         components={{

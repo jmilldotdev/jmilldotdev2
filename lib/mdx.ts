@@ -93,17 +93,15 @@ export const getAllFilesFrontMatter = async <T extends PostType>(
     .readdirSync(path.join(root, typeToPath[type]))
     .filter((file) => file.endsWith('.mdx'));
 
-  const posts = files
-    .map((postSlug: string) => {
-      const source = fs.readFileSync(
-        path.join(root, typeToPath[type], postSlug),
-        'utf8'
-      );
-      const parsedFile = matter(source);
+  const posts = files.map((postSlug: string) => {
+    const source = fs.readFileSync(
+      path.join(root, typeToPath[type], postSlug),
+      'utf8'
+    );
+    const parsedFile = matter(source);
 
-      return parsedFile.data as PostByType<T>;
-    })
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+    return parsedFile.data as PostByType<T>;
+  });
 
   return posts;
 };

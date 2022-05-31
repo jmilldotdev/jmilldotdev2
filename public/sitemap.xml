@@ -14,13 +14,19 @@
   </url>
 
   <url>
-    <loc>https://jmill.dev/projects/</loc>
+    <loc>https://jmill.dev/start-here/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://jmill.dev/start-here/</loc>
+    <loc>https://jmill.dev/posts/notes/a-silly-gpt-3-article/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmill.dev/posts/notes/gpt-3-prompts/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -70,13 +76,31 @@
   </url>
 
   <url>
+    <loc>https://jmill.dev/posts//snippets/first/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://jmill.dev/posts/projects/doomer/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://jmill.dev/posts/projects/marsbots-core/</loc>
+    <loc>https://jmill.dev/posts/projects/marsbots/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmill.dev/posts/projects/martian-oracle/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://jmill.dev/posts/projects/mulabonding/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -108,19 +132,13 @@
   </url>
 
   <url>
-    <loc>https://jmill.dev/posts/projects/tarot-bot/</loc>
+    <loc>https://jmill.dev/posts/projects/roadmaps/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://jmill.dev/posts/projects/viper-bot/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://jmill.dev/posts//snippets/first/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>

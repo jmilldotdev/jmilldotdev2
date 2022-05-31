@@ -1,8 +1,7 @@
-import { Anchor, css, Flex, H2, Text } from '@maximeheckel/design-system';
+import { Anchor, css, Flex, Text } from '@maximeheckel/design-system';
 import { projects } from 'config/internals';
 import React from 'react';
-import { Project } from 'types/post';
-import siteConfig from 'config/site';
+import { FrontMatter, Project } from 'types/post';
 import Layout from '@theme/layout';
 import Grid from '@theme/components/Grid';
 import Hero from '@theme/components/Hero';
@@ -10,7 +9,7 @@ import Link from 'next/link';
 
 interface Props {
   children: React.ReactNode;
-  frontMatter: Project;
+  project: FrontMatter<Project>;
 }
 
 const contentClass = css({
@@ -27,10 +26,8 @@ const contentClass = css({
   },
 });
 
-const ProjectLayout = ({ children, frontMatter }: Props) => {
-  const { slug, title, cover, github, description } = frontMatter;
-  const path = `/${projects}/${slug}/`;
-  const postUrl = `${siteConfig.url}${path}`;
+const ProjectLayout = ({ children, project }: Props) => {
+  const { title, cover, description } = project.frontMatter;
 
   const headerProps = {
     title,

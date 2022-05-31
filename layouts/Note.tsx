@@ -5,11 +5,11 @@ import Layout from '@theme/layout';
 import { notes } from 'config/internals';
 import Link from 'next/link';
 import React from 'react';
-import { Note } from 'types/post';
+import { FrontMatter, Note } from 'types/post';
 
 interface Props {
   children: React.ReactNode;
-  frontMatter: Note;
+  note: FrontMatter<Note>;
 }
 
 const contentClass = css({
@@ -26,8 +26,8 @@ const contentClass = css({
   },
 });
 
-const NoteLayout = ({ children, frontMatter }: Props) => {
-  const { title } = frontMatter;
+const NoteLayout = ({ children, note }: Props) => {
+  const { title } = note.frontMatter;
   const headerProps = {
     title,
     offsetHeight: 128,

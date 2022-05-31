@@ -68,13 +68,27 @@ export type Note = {
   type: PostType.NOTE;
 };
 
-export type FrontMatterSnippet = {
-  frontMatter: Snippet;
+export type FrontMatter<T> = {
+  frontMatter: T;
   mdxSource: MDXRemoteSerializeResult;
 };
 
-export type PostByType<T> = T extends PostType.BLOGPOST ? Post : Snippet;
+export type PostByType<T> = T extends PostType.BLOGPOST
+  ? Post
+  : T extends PostType.SNIPPET
+  ? Snippet
+  : T extends PostType.PROJECT
+  ? Project
+  : T extends PostType.NOTE
+  ? Note
+  : never;
 
 export type FrontMatterPostType<T> = T extends PostType.BLOGPOST
   ? FrontMatterPost
-  : FrontMatterSnippet;
+  : T extends PostType.SNIPPET
+  ? FrontMatter<Snippet>
+  : T extends PostType.PROJECT
+  ? FrontMatter<Project>
+  : T extends PostType.NOTE
+  ? FrontMatter<Note>
+  : never;

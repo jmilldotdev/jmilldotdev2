@@ -4,7 +4,7 @@ import Layout from '@theme/layout';
 import { notes } from 'config/internals';
 import Link from 'next/link';
 import React from 'react';
-import { Note } from 'types/post';
+import { Note, PostType } from 'types/post';
 
 const wrapperGrid = css({
   '> *': {
@@ -46,6 +46,7 @@ const Block = styled(Box, {
 const note: Note = {
   title: 'GPT-3 Prompts',
   slug: 'gpt-3-prompts',
+  type: PostType.NOTE,
 };
 
 const NotesPage = () => {

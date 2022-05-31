@@ -5,9 +5,14 @@ const path = require('path');
 const matter = require('gray-matter');
 const prettier = require('prettier');
 const lunr = require('lunr');
-const { typeToPath } = require('types/post');
 
 (async () => {
+  const typeToPath = {
+    blog: 'posts',
+    snippet: 'snippets',
+    project: 'projects',
+    note: 'notes',
+  };
   console.info(chalk.cyan('info'), ` - Generating Lunr search index`);
 
   const root = process.cwd() + '/content';
